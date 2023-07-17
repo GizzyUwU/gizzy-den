@@ -87,6 +87,7 @@ app.use(session({
 }));
   
 app.use('/assets', express.static(path.join(__dirname + '/assets/')));
+app.use(express.static(path.join(__dirname, 'assets')));
 app.use('/site.webmanifest', express.static(path.join(__dirname + '/assets/images/site.webmanifest')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -95,6 +96,7 @@ app.get('/', async (req, res) => {
     const { data } = await axios.get('https://api.lanyard.rest/v1/users/669947245776338994');
     let page = fs.readFileSync('./assets/html/index.html', { encoding: 'utf8' });
     page = page.replace(/{avatar}/g, avatarUrl(data.data.discord_user.id, data.data.discord_user.avatar));
+    res.setHeader('Content-Type', 'text/html');
     res.send(page);  
 })
 
@@ -173,11 +175,13 @@ app.get('/projects', async (req, res) => {
             let page = fs.readFileSync('./assets/html/projectsAdmin.html', { encoding: 'utf8' });
             page = page.replace(/{avatar}/g, avatarUrl(data.data.discord_user.id, data.data.discord_user.avatar));
             page = page.replace('{posts}', await getPost())
+            res.setHeader('Content-Type', 'text/html');
             res.send(page);  
           } else {
             let page = fs.readFileSync('./assets/html/projects.html', { encoding: 'utf8' });
             page = page.replace(/{avatar}/g, avatarUrl(data.data.discord_user.id, data.data.discord_user.avatar));
             page = page.replace('{posts}', await getPost())
+            res.setHeader('Content-Type', 'text/html');
             res.send(page);  
           }
         } else {
@@ -195,6 +199,7 @@ app.get('/projects', async (req, res) => {
               page = page.replace('{description}', projectData.projectDesc)
               page = page.replace('{link}', projectData.projectLink)
               page = page.replace('{projectDate}', projectData.projectDate);
+              res.setHeader('Content-Type', 'text/html');
               res.send(page);
             }
           }
@@ -205,6 +210,7 @@ app.get('/projects/create', async (req, res) => {
       const { data } = await axios.get('https://api.lanyard.rest/v1/users/669947245776338994');
       let page = fs.readFileSync('./assets/html/project-create.html', { encoding: 'utf8' });
       page = page.replace(/{avatar}/g, avatarUrl(data.data.discord_user.id, data.data.discord_user.avatar));
+      res.setHeader('Content-Type', 'text/html');
       res.send(page);  
     } else {
         const alertMessage = 'This page requires administrator access.';
@@ -293,6 +299,7 @@ app.get('/aboutt', async (req, res) => {
   const { data } = await axios.get('https://api.lanyard.rest/v1/users/669947245776338994');
   let page = fs.readFileSync('./assets/html/aboutt.html', { encoding: 'utf8' });
   page = page.replace(/{avatar}/g, avatarUrl(data.data.discord_user.id, data.data.discord_user.avatar));
+  res.setHeader('Content-Type', 'text/html');
   res.send(page);  
 })
 
@@ -300,6 +307,7 @@ app.get('/about', async (req, res) => {
   const { data } = await axios.get('https://api.lanyard.rest/v1/users/669947245776338994');
   let page = fs.readFileSync('./assets/html/about.html', { encoding: 'utf8' });
   page = page.replace(/{avatar}/g, avatarUrl(data.data.discord_user.id, data.data.discord_user.avatar));
+  res.setHeader('Content-Type', 'text/html');
   res.send(page);  
 })
 
@@ -308,6 +316,7 @@ app.get('/copyrights', async (req, res) => {
     const { data } = await axios.get('https://api.lanyard.rest/v1/users/669947245776338994');
     let page = fs.readFileSync('./assets/html/copyrights.html', { encoding: 'utf8' });
     page = page.replace(/{avatar}/g, avatarUrl(data.data.discord_user.id, data.data.discord_user.avatar));
+    res.setHeader('Content-Type', 'text/html');
     res.send(page);  
 })
 
@@ -393,6 +402,7 @@ if(config.log === true) {
     const { data } = await axios.get('https://api.lanyard.rest/v1/users/669947245776338994');
     let page = fs.readFileSync('./assets/html/login-reg.html', { encoding: 'utf8' });
     page = page.replace(/{avatar}/g, avatarUrl(data.data.discord_user.id, data.data.discord_user.avatar));
+    res.setHeader('Content-Type', 'text/html');
     res.send(page);  
   });
 
@@ -400,6 +410,7 @@ if(config.log === true) {
     const { data } = await axios.get('https://api.lanyard.rest/v1/users/669947245776338994');
     let page = fs.readFileSync('./assets/html/register.html', { encoding: 'utf8' });
     page = page.replace(/{avatar}/g, avatarUrl(data.data.discord_user.id, data.data.discord_user.avatar));
+    res.setHeader('Content-Type', 'text/html');
     res.send(page);  
   })
   app.post('/register', function(req, res) {
@@ -469,6 +480,7 @@ if(config.log === true) {
     const { data } = await axios.get('https://api.lanyard.rest/v1/users/669947245776338994');
     let page = fs.readFileSync('./assets/html/index.html', { encoding: 'utf8' });
     page = page.replace(/{avatar}/g, avatarUrl(data.data.discord_user.id, data.data.discord_user.avatar));
+    res.setHeader('Content-Type', 'text/html');
     res.send(page);  
   });
   if(config.port) {
