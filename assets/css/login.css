@@ -1,0 +1,80 @@
+.login-template {
+  height: 33em;
+  width: 33em;
+  background-color: #F0F0F0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10vh;
+  border-radius: 0.2em;
+  position: relative;
+}
+
+.footer-fix {
+  margin-top: 20vh;
+}
+
+.login-template input {
+  margin:15px 0;
+	padding:15px 10px;
+	width: 60%;
+	outline:none;
+	border:1px solid #bbb;
+	display:inline-block;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+    -webkit-transition:0.2s ease all;
+	   -moz-transition:0.2s ease all;
+	    -ms-transition:0.2s ease all;
+	     -o-transition:0.2s ease all;
+	        transition:0.2s ease all;
+}
+
+.login-template textarea {
+  margin:15px 0;
+	padding:15px 10px;
+	width: 60%;
+	outline:none;
+	border:1px solid #bbb;
+	display:inline-block;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+    -webkit-transition:0.2s ease all;
+	   -moz-transition:0.2s ease all;
+	    -ms-transition:0.2s ease all;
+	     -o-transition:0.2s ease all;
+	        transition:0.2s ease all;
+}
+
+
+.login-template .register  {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.login-template .warning {
+  width: 100%;
+  text-align: center;
+  background-color: red;
+  color: white;
+  height: 1.5em;
+}
+
+.login-template button {
+  background-color: #bbb;
+  color: #333333;
+  border: 2px solid #F0F0F0;
+  font-size: 15px;
+  letter-spacing: 2px;
+  padding: 20px 75px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 15px 30px;
+  -webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	transition: all 0.4s;
+}

@@ -1,0 +1,114 @@
+#body-overlay {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  overflow: hidden;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.7s;
+  opacity: 0;
+}
+
+#real-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 0;
+  display: none;
+  height: 100%;
+  background-color: #0F3460;
+  background: linear-gradient(to bottom, #16213E, #0F3460, #533483, #8f3645);
+  transition: width 0.7s; /* Transition the width property */
+  animation: slideIn 0.7s forwards; /* Use an animation to slide in the sidebar */
+}
+
+#side {
+  display: none;
+}
+
+#side ul {
+  width: 300px;
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+}
+
+.normal-li{
+  list-style: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.normal-li:hover{
+  background-color: #16213E;
+}
+.active {
+  background-color: #141b31;
+}
+
+#side li a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+}
+
+.sidebar-ul {
+  padding-left: 0;
+}
+
+.typed-li {
+  list-style: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 6px;
+  padding-left: 20px;
+}
+
+.typed-li a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Slide-in animation */
+#body-overlay.show {
+  display: block;
+  opacity: 1;
+  transition: 0.7s;
+}
+
+#real-menu.show {
+  display: block;
+  width: 300px;
+  transform: translateX(0); /* Slide the sidebar into view */
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%); /* Start off-screen */
+  }
+  100% {
+    transform: translateX(0); /* Slide the sidebar into view */
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    width: 300px;
+    transform: translateX(0); /* Start in view */
+  }
+  100% {
+    width: 0;
+    transform: translateX(-100%); /* Slide the sidebar off-screen */
+  }
+}
+
+#real-menu.hide {
+  animation: slideOut 0.7s forwards; /* Use an animation to slide out the sidebar */
+}

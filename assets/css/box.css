@@ -1,0 +1,12 @@
+#parent {
+    display: table; 
+    width: 50%;
+    border: 3px;
+    text-align: center; 
+    margin: 0 auto;
+}
+
+#child {
+    display: table-cell;
+    vertical-align: middle;
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizzy's Portfolio</title>
+    <link rel="icon" href="/assets/images/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
+    <link rel="stylesheet" href="/assets/css/box.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body onload="typing()">
+    <div class="blur"></div>
+    <ul id="ul-nav">
+        <li id="show-sidebar">
+            <label class="sidebarIconToggle">
+            <div class="spinner diagonal part-1"></div>
+            <div class="spinner horizontal"></div>
+            <div class="spinner diagonal part-2"></div>
+        </label></li>
+      </ul>      
+    <div id="body-overlay"></div>
+    <nav id="real-menu" role="navigation">        
+        <ul class="sidebar-ul">
+            <br>
+            <img style="display: block; margin-left: auto; margin-right: auto; border-radius: 5em; width: 92px; height: 92px;" alt="Profile Picture" src="{sideavatar}">
+            <li style="text-align: center;" class="typed-li"><a><span id="sidebar-typed"></span></a></li>
+            <li style="text-align: center;" class="typed-li"><a><span id="sidebar-typed2"></span></a></li>
+            <li class="normal-li" onclick="window.location.href='/'">Home</li>
+            <li class="normal-li" onclick="window.location.href='/projects'">Projects</li>
+            <li class="normal-li active">About</li>
+            <li class="normal-li" onclick="window.location.href='/contact'">Contact</li>
+            <li id="closeButton" class="normal-li" style="text-align: center;"><a>Close</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+    <div id="parent">
+        <div id="child" style="text-align: left;">
+          <div style="display: flex; justify-content: space-between;">
+            <h1 style="color: white; float: left;"><span id="nametext"></span></h1>
+            <img style="float: right; border-radius: 5em; width: 82px; height: 82px;" alt="Profile Picture" src="{mainavatar}">
+          </div>
+          <div style="display: flex;">
+            <h2 style="color: white; float: left;"><span id="devtext"></span></h2>
+          </div>
+          <br>
+          <div style="display: flex;">
+
+            <p style="color: white; float: left;">Hey there! Thanks for checking out my "about me" section 👋. I'm Gizzy, a Dyspraxic 13-year-old who loves to create awesome projects that showcase my skills 💻. </p>
+          </div>
+          <div style="display: flex;">
+            <p style="color: white; float: left;">I'm really passionate about coding and always looking to learn more about the latest technologies and techniques 🤖. I live in the UTC+0 timezone ⏰ and spend a lot of my free time working on personal projects and chatting with my friends on Discord 🎧. You can find me there with the handle Gizzy#9443 🦊.</p>
+          </div>
+          <div style="display: flex;">
+            <p style="color: white; float: left;">I'm excited to share some of my work with you on this website and can't wait to grow my portfolio over time 📈. Whether it's developing dynamic web applications 🌐, designing eye-catching interfaces 🎨, or building robust systems that can handle complex data 📊,</p>
+          </div>
+          <div style="display: flex;">
+            <p style="color: white; float: left;">I'm always up for a challenge and eager to put my skills to the test 💪. So stick around, and let's create some amazing things together! 🤝</p>
+          </div>
+          <div style="display: flex">
+            <div class="btn-group" role="group">
+                <button type="button" onclick="window.location.href='https://github.com/NeroGizmoUwU'" class="btn btn-primary"><i class="fa-brands fa-github"></i> Github</button>
+                <button type="button" onclick="window.location.href='https://codepen.io/nerogizmouwu'" class="btn btn-primary"><i class="fa-brands fa-codepen"></i> Codepen</button>
+                <button type="button" onclick="window.location.href='https://replit.com/@RaspberryRBX'" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f26201" d="M2 1.5A1.5 1.5 0 0 1 3.5 0h7A1.5 1.5 0 0 1 12 1.5V8H3.5A1.5 1.5 0 0 1 2 6.5ZM12 8h8.5A1.5 1.5 0 0 1 22 9.5v5a1.5 1.5 0 0 1-1.5 1.5H12ZM2 17.5A1.5 1.5 0 0 1 3.5 16H12v6.5a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 2 22.5Z"/></svg> Replit</button>
+              </div>
+            </div>
+            <br>
+            <div style="display: flex;">
+                <h2 style="color: white; float: left;">My Games</h2>
+              </div>
+              <div class="boxes">
+                <div class="square box">
+                    <img style="height: 70px; width: 70px;" src="https://static.wikia.nocookie.net/minecraft/images/f/fe/GrassNew.png">
+                    <br>
+                    <br>
+                    <h1 style="font-size: 20px;">Minecraft Java Edition</h1>
+                </div>
+                <div class="square box">
+                    <img style="height: 70px; width: 160px;" src="https://static.wikia.nocookie.net/logopedia/images/f/f8/Cult_of_the_Lamb.png">
+                    <br>
+                    <br>
+                    <h1 style="font-size: 20px;">Cult of the Lamb</h1>
+                </div>
+                <div class="square box">
+                    <img style="height: 120px; width: 150px;" src="https://upload.wikimedia.org/wikipedia/en/c/c5/Left_4_Dead_logo.png">
+                    <br>
+                    <h1 style="font-size: 20px;">Left 4 Dead</h1>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-content pt-5 pb-5">
+          <div class="row">
+            <div style="margin-left: auto; margin-right: auto;" class="col-xl-4 col-lg-4 mb-30">
+              <div class="footer-widget">
+                <div class="footer-logo"><object style="margin-bottom: 1px;" data="/assets/images/gizzy.svg" type="image/svg+xml"><img src="/asfavicon.svg" /></object></div>
+                <div class="footer-text">
+                  <p>Welcome to my portfolio! If ya want check out some of my <a href="/projects">projects</a> or <a href="#">about me</a>.</p>
+                </div>
+                <div class="footer-social-icon">
+                  <a href="#"><i class="fab fa-github github-bg"></i></a>
+                  <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                  <a href="#"><i class="fab fa-reddit-alien reddit-bg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div style="margin-left: auto; margin-right: auto;" class="col-xl-4 col-lg-6 col-md-7 mb-50">
+              <div class="footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>Useful Links</h3>
+                </div>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Projects</a></li>
+                  <li><a href="#">About me</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+<script src="https://kit.fontawesome.com/48ffc0ae48.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+<script>
+
+
+    var count = 0;
+    function sidebartyped() {
+        if(count === 0) {
+            var typed = new Typed('#sidebar-typed', {
+            strings: ["Gizzy"],
+            typeSpeed: 40,
+            onComplete: () => {
+                typed.cursor.remove();
+                sidebartyped2()
+            }
+        });
+        function sidebartyped2() {
+        var typed = new Typed('#sidebar-typed2', {
+            strings: ["Backend and Fronted Developer"],
+            typeSpeed: 40,
+            onComplete: () => {
+                typed.cursor.remove();
+                count = 1;
+            }
+        });
+    }
+    } 
+    }   
+
+    var toggle = 0;
+    var sidebar = 0;
+    function typing() {
+    var isEffectComplete = false;
+
+    var typed = new Typed('#nametext', {
+        strings: ["Gizzy"],
+        typeSpeed: 60,
+        onComplete: () => {
+            isEffectComplete = true;
+            startSecondTyping();
+        },
+    });
+
+    function startSecondTyping() {
+    if(isEffectComplete) {
+        typed.cursor.remove();
+        var typed2 = new Typed('#devtext', {
+            strings: ["Backend and Frontend Developer"],
+            typeSpeed: 60,
+            onComplete: () => {
+                typed2.cursor.remove();
+            }
+        });
+    }
+}
+    }
+    
+const bodyOverlay = document.getElementById('body-overlay');
+const side = document.getElementById('show-sidebar');
+const menu = document.getElementById('real-menu');
+const closeButton = document.getElementById('closeButton');
+function openSidebar() {
+  bodyOverlay.classList.add('show');
+  menu.classList.add('show');
+  sidebartyped()
+}
+
+function closeSidebar() {
+  bodyOverlay.classList.remove('show');
+  menu.classList.remove('show');
+}
+
+side.addEventListener('click', openSidebar);
+bodyOverlay.addEventListener('click', closeSidebar);
+closeButton.addEventListener('click', closeSidebar);
+
+function toggleText() {
+  var textElement = document.getElementById('text');
+  if (toggle === 0) {
+    textElement.classList.add('body-text');
+    toggle = 1;
+  } else if (toggle === 1) {
+    textElement.classList.remove('body-text');
+    toggle = 0;
+  }
+}
+</script>
+</html>

@@ -1,0 +1,121 @@
+.owo-idk-wut-to-name-this {
+  --img-scale: 1.001;
+  --title-color: black;
+  --link-icon-translate: -20px;
+  --link-icon-opacity: 0;
+  position: relative;
+  border-radius: 16px;
+  box-shadow: none;
+  background: rgba(168, 168, 168, 0.2);
+  width: 70em;
+  height: 50em;
+  overflow: hidden;
+}
+
+
+@media screen and (max-width: 768px) {
+  .owo-idk-wut-to-name-this {
+    justify-content: center;
+  }
+}
+
+.owo-idk-wut-to-name-this a::after {
+    position: absolute;
+    inset-block: 0;
+    inset-inline: 0;
+    cursor: pointer;
+    content: "";
+    width: fit-content;
+  }
+  
+  /* basic article elements styling */
+  .owo-idk-wut-to-name-this h2 {
+    margin: 0 0 18px 0;
+    font-size: 1.9rem;
+    letter-spacing: 0.06em;
+    color: var(--title-color);
+    transition: color 0.3s ease-out;
+    word-wrap: break-word; /* Added property for text wrapping */
+  }
+  
+  .owo-idk-wut-to-name-this p {
+    word-wrap: break-word; /* Added property for text wrapping */
+    margin-left: 10px; /* Adjust the value to add space from the left wall */
+    margin-right: 10px;
+    text-align: left; /* Change the alignment to left */
+  }  
+
+  .owo-idk-wut-to-name-this h1 {
+    word-wrap: break-word; /* Added property for text wrapping */
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: -10px;
+  }
+  
+  hr {
+    color: lime;
+  }
+  
+  figure {
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  
+  .owo-idk-wut-to-name-this img {
+    max-width: 100%;
+    transform-origin: center;
+    transform: scale(var(--img-scale));
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .owo-idk-wut-to-name-this-body {
+    padding: 24px;
+  }
+  
+  .owo-idk-wut-to-name-this a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #44adbb;
+  }
+  
+  .owo-idk-wut-to-name-this a:focus {
+    outline: 1px dotted #6bb6c0;
+  }
+  
+  .owo-idk-wut-to-name-this a .icon {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    transform: translateX(var(--link-icon-translate));
+    opacity: var(--link-icon-opacity);
+    transition: all 0.3s;
+  }
+  
+  /* using the has() relational pseudo selector to update our custom properties */
+  .owo-idk-wut-to-name-this:has(:hover, :focus) {
+    --img-scale: 1.1;
+    --link-icon-translate: 0;
+    --link-icon-opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+  
+  .projectButton {
+    background-color:#6905ff;
+    border-radius:3px;
+    border:1px solid #6905ff;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    padding:6px 24px;
+    text-decoration:none;
+    }
+  
+          

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizzy's Portfolio</title>
+    <link rel="icon" href="/assets/images/proto.ico">
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
+    <link rel="stylesheet" href="/assets/css/login-reg.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <div class="header"></div>
+    <input type="checkbox"  class="openSidebarMenu" id="openSidebarMenu">
+    <div onclick="type(), toggleText()">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+      <div class="spinner diagonal part-1"></div>
+      <div class="spinner horizontal"></div>
+      <div class="spinner diagonal part-2"></div>
+    </label>
+    </div>
+    <div id="sidebarMenu">
+      <ul class="sidebarMenuInner">
+        <li id="type"></li>
+        <li class="active" onclick="toggleSidebar()">Home</li>
+        <li onclick="toggleSidebar(), window.location.href='/projects'">Projects</li>
+        <li onclick="toggleSidebar(), window.location.href='/about'">About</li>
+        <li onclick="toggleSidebar(), window.location.href='/contact'">Contact</li>
+      </ul>
+    </div>
+    <div id='center' class="main">
+        <div id="text">
+          <div class="login-form">
+            <form method="post" action="/login">
+              <h1>Login</h1>
+              <div class="content">
+                <div class="input-field">
+                  <input type="text" placeholder="Enter Email/Username" name="username" autocomplete="nope">
+                </div>
+                <div class="input-field">
+                  <input type="password" placeholder="Enter Password" name="password" autocomplete="new-password">
+                </div>
+                <a href="/register" class="link">Need to register a account?</a>
+              </div>
+              <div class="action">
+                <button type="submit" id="submit">Sign in</button>
+                <button type="button" onclick="window.location.href='/register'" id="reg">Register</button>
+              </div>              
+            </form>
+          </div>
+            </div>
+</body>
+
+<script src="https://kit.fontawesome.com/48ffc0ae48.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+<script>
+      const myButton = document.getElementById('submit');
+  const sidebarMenu = document.getElementById('openSidebarMenu');
+  const reg = document.getElementById('reg');
+  // Add an event listener to the submit button
+ reg.addEventListener('click', function() {
+    // Run this code before the page is swapped
+    sidebarMenu.checked = false;
+  });
+  myButton.addEventListener('click', function() {
+    // Run this code before the page is swapped
+    sidebarMenu.checked = false;
+  });
+    var count = 0;
+    function type() {
+        if(count === 0) {
+        var typed = new Typed('#type', {
+            strings: ["Nero Gizmo <span>Web Developer</span>"],
+            typeSpeed: 40,
+        });
+        typed.cursor.remove();
+        count = 1;
+    } 
+    }   
+    var toggle = 0;
+    function toggleSidebar() {
+  document.getElementById("openSidebarMenu").checked = false;
+}
+function toggleText() {
+  var textElement = document.getElementById('text');
+  if (toggle === 0) {
+    textElement.classList.add('body-text');
+    toggle = 1;
+  } else if (toggle === 1) {
+    textElement.classList.remove('body-text');
+    toggle = 0;
+  }
+}
+
+</script>
+</html>
