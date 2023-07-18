@@ -20,7 +20,7 @@
     "mongoose": "^7.0.3",
     "morgan": "^1.10.0",
     "path": "^0.12.7",
-    "dotenv": "^latest"
+    "dotenv": "^16.3.1"
   },
   "keywords": [
     "Portfolio"
