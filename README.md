@@ -1,2 +1,1 @@
-# Gizzy's Den
-Gizzy's Den is my work in progress portfolio.
+# REPO MADE TO TEST AND FIND HOSTS FOR PORTFOLIO TO BE HOSTED ON THIS IS NOT FINAL VERSION
