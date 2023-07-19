@@ -295,29 +295,12 @@ async function checkIfIdExistsInDatabase(id) {
   return !!existingData;
 }
 
-app.get('/aboutt', async (req, res) => {
-  const { data } = await axios.get('https://api.lanyard.rest/v1/users/669947245776338994');
-  let page = fs.readFileSync('./assets/html/aboutt.html', { encoding: 'utf8' });
-  page = page.replace(/{avatar}/g, avatarUrl(data.data.discord_user.id, data.data.discord_user.avatar));
-  res.setHeader('Content-Type', 'text/html');
-  res.send(page);  
-})
-
 app.get('/about', async (req, res) => {
   const { data } = await axios.get('https://api.lanyard.rest/v1/users/669947245776338994');
   let page = fs.readFileSync('./assets/html/about.html', { encoding: 'utf8' });
   page = page.replace(/{avatar}/g, avatarUrl(data.data.discord_user.id, data.data.discord_user.avatar));
   res.setHeader('Content-Type', 'text/html');
   res.send(page);  
-})
-
-
-app.get('/copyrights', async (req, res) => {
-    const { data } = await axios.get('https://api.lanyard.rest/v1/users/669947245776338994');
-    let page = fs.readFileSync('./assets/html/copyrights.html', { encoding: 'utf8' });
-    page = page.replace(/{avatar}/g, avatarUrl(data.data.discord_user.id, data.data.discord_user.avatar));
-    res.setHeader('Content-Type', 'text/html');
-    res.send(page);  
 })
 
 app.post('/login', async function(req, res) {
